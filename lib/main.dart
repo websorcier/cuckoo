@@ -3,6 +3,9 @@
 // Material
 import 'package:flutter/material.dart';
 
+// App Theme
+import 'package:cuckoo/themes/app_theme.dart';
+
 // Pages
 import 'package:cuckoo/pages/home.dart';
 
@@ -21,10 +24,10 @@ class Cuckoo extends StatelessWidget {
 	Widget build(BuildContext context) {
 		return MaterialApp(
 			title: 'Cuckoo',
+
+			debugShowCheckedModeBanner: false,
 			
-			theme: ThemeData(
-				primarySwatch: Colors.blue,
-			),
+			theme: AppTheme.defaultTheme,
 
 			home: const Home(title: 'Cuckoo - Time Tracker'),
 		);
