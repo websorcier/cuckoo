@@ -39,8 +39,12 @@ class AppTheme {
 			primaryColorDark: brandPrimaryDark,
 			primaryColorLight: brandPrimaryLight,
 
+			inputDecorationTheme: baseTheme.inputDecorationTheme.copyWith(
+				border: const OutlineInputBorder(),
+			),
+
 			buttonTheme: baseTheme.buttonTheme.copyWith(
-				buttonColor: brandSecondary,
+				buttonColor: brandPrimary,
 				textTheme: ButtonTextTheme.primary,
 			),
 

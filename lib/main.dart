@@ -24,12 +24,10 @@ class Cuckoo extends StatelessWidget {
 	Widget build(BuildContext context) {
 		return MaterialApp(
 			title: 'Cuckoo',
-
 			debugShowCheckedModeBanner: false,
-			
 			theme: AppTheme.defaultTheme,
 
-			home: const Home(title: 'Cuckoo - Time Tracker'),
+			home: const Home(),
 		);
 	}
 }

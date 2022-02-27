@@ -6,9 +6,7 @@ import 'package:flutter/material.dart';
 /* ----------  Homepage  ---------- */
 
 class Home extends StatefulWidget {
-	const Home({Key? key, required this.title}) : super(key: key);
-
-	final String title;
+	const Home({ Key? key }) : super(key: key);
 
 	@override
 	State<Home> createState() => _HomeState();
@@ -18,14 +16,37 @@ class _HomeState extends State<Home> {
 	@override
 	Widget build(BuildContext context) {
 		return Scaffold(
-			body: Center(
-				child: Text('Add Time', style: Theme.of(context).textTheme.headline3),
-			),
-			
-			floatingActionButton: FloatingActionButton(
-				onPressed: () {},
-				tooltip: 'Add Time',
-				child: const Icon(Icons.add),
+			body: SafeArea(
+				child: Padding(
+					padding: const EdgeInsets.all(16.0),
+					child: Column(
+						crossAxisAlignment: CrossAxisAlignment.start,
+						mainAxisSize: MainAxisSize.max,
+						children: [
+							TextFormField (
+								decoration: const InputDecoration(labelText: 'Username'),
+							),
+
+							const SizedBox(height: 16.0),
+							
+							TextFormField (
+								decoration: const InputDecoration(labelText: 'Password'),
+							),
+
+							const SizedBox(height: 24.0),
+
+							ElevatedButton(
+								onPressed: () {},
+								child: Text('Submit'.toUpperCase()),
+								style: ElevatedButton.styleFrom(
+									padding: const EdgeInsets.symmetric(horizontal: 24.0, vertical: 12.0),
+									elevation: 0,
+									shadowColor: Colors.transparent,
+								)
+							)
+						],
+					),
+				),
 			),
 		);
 	}
